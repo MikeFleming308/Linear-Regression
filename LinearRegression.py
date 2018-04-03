@@ -22,7 +22,7 @@ def LinearRegression(coords_list):
         ords = (x, calc_y)
         reg_list.append(ords)
         print "\nx = {}, y = {}, calculated y = {}, error = {}".format(x, y, calc_y, error)
-    print "\nSlope = {}, intercept = {}".format(m, calc_y)
+    print "\nSlope = {}, intercept = {}".format(m, b)
     return reg_list
     
 def PlotLines(ords_list):
