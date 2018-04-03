@@ -33,7 +33,8 @@ def PlotLines(ords_list):
     fig, ax = plt.subplots()
     ax.plot(xords, yords)
     ax.plot(xords, reg_yords)
-    ax.set(xlabel='x', ylabel='y', title='About as simple as it gets, folks')
+    ax.set(xlabel='x', ylabel='y', title='Data with regression line')
     ax.grid()
     plt.show()
         
+PlotLines(coords)
