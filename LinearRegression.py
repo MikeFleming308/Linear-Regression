@@ -1,6 +1,6 @@
 from __future__ import division
 import matplotlib.pyplot as plt
-# import numpy as np
+
 
 coords = [(2, 4), (3, 5), (5, 7), (7, 10), (9, 15)]
     
