@@ -4,11 +4,12 @@ import math
 
 coords = [(2, 4), (3, 5), (5, 7), (7, 10), (9, 15)]
 houses = [(1100, 199), (1400, 245), (1425, 319), (1550, 219), (1600, 312), (1700, 279), (1700, 255), (1875, 308), (2350, 405), (2450, 324)]
-# SE of regression slope = sb1 = sqrt [ Σ(yi – ŷi)2 / (n – 2) ] / sqrt [ Σ(xi – x)2 ].
+
 def LinearRegression(xy_list):
     # Takes a list of coordinates as tuples and returns the regression line coordinates in the same format.
     # Prints output to screen
     reg_list = []
+    xylist.sort()
     n = len(xy_list)
     sumx, sumy, sumx2, sumxy = 0, 0, 0, 0
     SST, SSR, SSE = 0, 0, 0 # SST = Total Sum of Squares, SSR = Regression Sum of Squares, SSE = Error Sum of Squares
@@ -36,7 +37,7 @@ def LinearRegression(xy_list):
     chk_SST = SSR + SSE
     rsquared = SSR / SST
     std_error = math.sqrt(SSE / (n-2))
-    sb1 = std_error / math.sqrt(xSST)
+    sb1 = std_error / math.sqrt(xSST) # Standard Error of regression slope = sb1 = sqrt (Σ(yi – ŷi)2 /(n – 2)) / sqrt (Σ(xi – x)2)
     
     print "\nSlope: {}".format(m)
     print "\nIntercept: \t{}".format(b)
