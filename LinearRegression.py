@@ -12,6 +12,7 @@ def LinearRegression(xy_list):
     n = len(xy_list)
     sumx, sumy, sumx2, sumxy = 0, 0, 0, 0
     SST, SSR, SSE = 0, 0, 0 # SST = Total Sum of Squares, SSR = Regression Sum of Squares, SSE = Error Sum of Squares
+    xSST = 0
     for x, y in xy_list:
         sumx += x
         sumy += y
@@ -36,12 +37,18 @@ def LinearRegression(xy_list):
     rsquared = SSR / SST
     std_error = math.sqrt(SSE / (n-2))
     sb1 = std_error / math.sqrt(xSST)
+    
     print "\nSlope: {}, intercept: {}".format(m, b)
+    print "\nIntercept: \t{}".format(b)
+    print "\nSSR (Regression Sum of Squares): {}".format(SSR)
+    print "\nSSE (Error Sum of Squares): \t\t{}".format(SSE)
     print "\nTotal Sum of Squares: {}".format(SST)
-    print "\nRegression Sum of Squares: {}".format(SSR)
-    print "\nSum of Errors: {}".format(SSE)
+    print "\nSSR + SSE = {} (Should equal SST above)".format(chk_SST)
+    print "\nR Square: \t{}".format(rsquared)
+    print "\nStandard Error: {}".format(std_error)
+    print "\nObservations: {}".format(n)
     print "\nStandard Error of Regression Slope: {}".format(sb1)
-
+ 
     return reg_list
     
 def PlotLines(ords_list):
@@ -55,5 +62,4 @@ def PlotLines(ords_list):
     ax.set(xlabel='x', ylabel='y', title='Data with regression line')
     ax.grid()
     plt.show()
-        
-PlotLines(coords)
+ 
