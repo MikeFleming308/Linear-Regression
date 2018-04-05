@@ -38,7 +38,7 @@ def LinearRegression(xy_list):
     std_error = math.sqrt(SSE / (n-2))
     sb1 = std_error / math.sqrt(xSST)
     
-    print "\nSlope: {}, intercept: {}".format(m, b)
+    print "\nSlope: {}".format(m)
     print "\nIntercept: \t{}".format(b)
     print "\nSSR (Regression Sum of Squares): {}".format(SSR)
     print "\nSSE (Error Sum of Squares): \t\t{}".format(SSE)
