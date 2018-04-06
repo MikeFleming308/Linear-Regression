@@ -10,7 +10,7 @@ def LinearRegression(xy_list):
     # Takes a list of coordinates as tuples and returns the regression line coordinates in the same format.
     # Prints output to screen
     reg_list = [] # List of coordinates for the regression line (x, predicted y)
-    xylist.sort() # Ensure the x values are arranged and read in ascending order
+    xy_list.sort() # Ensure the x values are arranged and read in ascending order
     n = len(xy_list) # n = number of observations
     sumx, sumy, sumx2, sumxy = 0, 0, 0, 0
     SST, SSR, SSE = 0, 0, 0 
