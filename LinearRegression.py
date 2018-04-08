@@ -43,17 +43,17 @@ def LinearRegression(xy_list):
     std_error = math.sqrt(SSE / (n-2)) # Standard Error of Estimate - The standard deviation of the variation of observations around the regression line 
     sb1 = std_error / math.sqrt(xSST) # Standard Error of regression slope = sb1 = sqrt (Σ(yi – ŷi)2 /(n – 2)) / sqrt (Σ(xi – x)2)
     t = m / sb1 # t Test
-    print "\nSlope: {}".format(m)
-    print "\nIntercept: \t{}".format(b)
-    print "\nSSR (Regression Sum of Squares): {}".format(SSR)
-    print "\nSSE (Error Sum of Squares): \t\t{}".format(SSE)
-    print "\nTotal Sum of Squares: {}".format(SST)
-    print "\nSSR + SSE = {} (Should equal SST above)".format(chk_SST)
-    print "\nR Square: \t{}".format(rsquared)
-    print "\nStandard Error: {}".format(std_error)
+    print "\nSlope: {}".format(round(m, 5))
+    print "\nIntercept: \t{}".format(round(b, 5))
+    print "\nSSR (Regression Sum of Squares): {}".format(round(SSR, 5))
+    print "\nSSE (Error Sum of Squares): \t\t{}".format(round(SSE, 5))
+    print "\nTotal Sum of Squares: {}".format(round(SST, 5))
+    print "\nSSR + SSE = {} (Should equal SST above)".format(round(chk_SST, 5))
+    print "\nR Square: \t{}".format(round(rsquared, 5))
+    print "\nStandard Error: {}".format(round(std_error, 5))
     print "\nObservations: {}".format(n)
-    print "\nStandard Error of Regression Slope: {}".format(sb1)
-    print "\nt Stat: {}".format(t)
+    print "\nStandard Error of Regression Slope: {}".format(round(sb1, 5))
+    print "\nt Stat: {}".format(round(t, 5))
     return reg_list
     
 def PlotLines(ords_list):
