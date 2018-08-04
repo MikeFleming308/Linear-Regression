@@ -1,2 +1,2 @@
 # Linear-Regression
-Statistical concepts and methods. linear regression calculation.
+Statistical concepts and methods. Linear regression calculation.
